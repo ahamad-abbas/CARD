@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #491de8 , #cb8631);
+
+}
+.profile-card{
+    width: 350px;
+    height: 380px;
+    perspective: 900px;
+}
+.profile-card-inner{
+    width: 100%;
+    height: 100%;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+.profile-card:hover .profile-card-inner {
+    transform: rotateY(180deg);
+}
+.profile-card-front,
+.profile-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 24px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.profile-card-front {
+    background-image:url(Ahmad.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.profile-card-front .title{
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+}
+.profile-card-front .title h3{
+    color: #fff;
+    font-weight: 600;
+
+}
+.profile-card-front .title span {
+    font-size: 14px;
+    color: #d2cfcf;
+}
+
+.profile-card-back{
+    background:#fff ;
+    color: #000;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profile-card-back img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.profile-card-back h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+.profile-card-back .job {
+    font-size: 16px;
+}
+
+.social {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 15px;
+ margin: 20px 0;
+}
+.social span {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.social span:first-child {
+    background: linear-gradient(to bottom, #7f0ae8, #fd0070, #feb200 );
+}
+.social span:nth-child(2){
+    background: #1da1f2;
+    color: #fff;
+}
+.social span:last-child {
+    background: #0d8bf0;
+    color: #fff
+}
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.btns button {
+    width: 100px;
+    padding: 7px;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    background: #5243ed;
+    cursor: pointer;
+}
+
+.btns button:hover {
+    background: #6e63e9de;
+    transition: 0.3s;
+
+}
+.activity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.activity span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.activity span:first-child{ 
+    border-radius: 1px solid #e1dede;
+    padding-right: 20px;
+
+}
+.activity span:last-child {
+    border-radius: 1px solid #e1dede;
+    padding-left: 20px;
+}
